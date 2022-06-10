@@ -273,6 +273,3 @@
     });
   });
 })();
-
-/**Custom */
-// on("click", "submit", function (e) {}, false);
