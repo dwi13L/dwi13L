@@ -1,0 +1,97 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+}
+
+const { title, description, pubDate } = Astro.props;
+
+const formattedDate = pubDate.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<BaseLayout title={`${title} — Daniel William`} description={description}>
+  <div class="max-w-2xl mx-auto px-6 py-16">
+    <a href="/blog" class="text-sm inline-flex items-center gap-1 mb-10 transition-colors" style="color: var(--color-text-secondary);" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='var(--color-text-secondary)'">
+      ← Back to blog
+    </a>
+    <time class="text-sm block mb-4" style="color: var(--color-text-secondary);">{formattedDate}</time>
+    <h1 class="text-3xl font-bold mb-12" style="font-family: var(--font-family-mono); color: var(--color-text-primary);">{title}</h1>
+    <article class="prose-content">
+      <slot />
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .prose-content :global(p) {
+    color: var(--color-text-primary);
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+  }
+  .prose-content :global(h2) {
+    font-family: var(--font-family-mono);
+    color: var(--color-text-primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .prose-content :global(h3) {
+    font-family: var(--font-family-mono);
+    color: var(--color-text-primary);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  .prose-content :global(code) {
+    font-family: var(--font-family-mono);
+    font-size: 0.875rem;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: 0.125rem 0.375rem;
+    border-radius: 0.25rem;
+    color: var(--color-accent);
+  }
+  .prose-content :global(pre) {
+    background-color: var(--color-surface) !important;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+  }
+  .prose-content :global(pre code) {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+  }
+  .prose-content :global(a) {
+    color: var(--color-accent);
+    text-decoration: underline;
+  }
+  .prose-content :global(ul), .prose-content :global(ol) {
+    color: var(--color-text-primary);
+    padding-left: 1.5rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.8;
+  }
+  .prose-content :global(li) {
+    margin-bottom: 0.5rem;
+  }
+  .prose-content :global(blockquote) {
+    border-left: 3px solid var(--color-accent-muted);
+    padding-left: 1rem;
+    color: var(--color-text-secondary);
+    font-style: italic;
+    margin-bottom: 1.25rem;
+  }
+</style>

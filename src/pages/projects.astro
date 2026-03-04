@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+const projects = [
+  {
+    title: 'AI Gift Coordinator',
+    description: 'An AI-powered gift coordination platform for Indian weddings. Handles wishlists, group contributions, and smart recommendations using LLMs.',
+    tags: ['FastAPI', 'React', 'Razorpay', 'OpenAI'],
+    github: 'https://github.com/danielwilliam/ai-gift-coordinator',
+  },
+  {
+    title: 'Journal RAG System',
+    description: 'Personal knowledge retrieval over 500+ markdown journals. Semantic search with embeddings, enabling natural-language queries over years of notes.',
+    tags: ['Python', 'OpenAI Embeddings', 'ChromaDB', 'FastAPI'],
+    github: 'https://github.com/danielwilliam/journal-rag',
+  },
+  {
+    title: 'Agentic Code Reviewer',
+    description: 'An AI agent that reviews pull requests with context-aware feedback. Understands repo conventions, not just syntax. Integrates with GitHub webhooks.',
+    tags: ['Python', 'Claude API', 'GitHub API', 'FastAPI'],
+    github: 'https://github.com/danielwilliam/agentic-reviewer',
+  },
+];
+---
+
+<BaseLayout title="Projects — Daniel William" description="Things I've built">
+  <div class="max-w-4xl mx-auto px-6 py-16">
+    <div class="mb-12">
+      <h1 class="text-3xl font-bold mb-3" style="font-family: var(--font-family-mono); color: var(--color-text-primary);">Projects</h1>
+      <p class="text-sm" style="color: var(--color-text-secondary);">
+        Things I've built — mostly AI-adjacent, all production-minded. These are placeholders; more coming.
+      </p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      {projects.map(project => (
+        <ProjectCard {...project} />
+      ))}
+    </div>
+  </div>
+</BaseLayout>
