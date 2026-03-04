@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroSection from '../components/HeroSection.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title="Daniel William — Lead Engineer & Applied AI Engineer">
@@ -44,19 +45,19 @@ import HeroSection from '../components/HeroSection.astro';
         <div class="flex items-start gap-3">
           <span class="text-sm mt-0.5 shrink-0" style="color: var(--color-accent);">▸</span>
           <p class="text-sm leading-relaxed" style="color: var(--color-text-secondary);">
-            Building: <a href="/projects" style="color: var(--color-accent);">see projects →</a>
+            Building: <a href={`${base}/projects`} style="color: var(--color-accent);">see projects →</a>
           </p>
         </div>
         <div class="flex items-start gap-3">
           <span class="text-sm mt-0.5 shrink-0" style="color: var(--color-accent);">▸</span>
           <p class="text-sm leading-relaxed" style="color: var(--color-text-secondary);">
-            Writing about the journey: <a href="/blog" style="color: var(--color-accent);">read the blog →</a>
+            Writing about the journey: <a href={`${base}/blog`} style="color: var(--color-accent);">read the blog →</a>
           </p>
         </div>
         <div class="flex items-start gap-3">
           <span class="text-sm mt-0.5 shrink-0" style="color: var(--color-accent);">▸</span>
           <p class="text-sm leading-relaxed" style="color: var(--color-text-secondary);">
-            Tracking daily consistency publicly: <a href="/tracker" style="color: var(--color-accent);">see the tracker →</a>
+            Tracking daily consistency publicly: <a href={`${base}/tracker`} style="color: var(--color-accent);">see the tracker →</a>
           </p>
         </div>
       </div>
