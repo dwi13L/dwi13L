@@ -1,0 +1,22 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t mt-24 py-10" style="border-color: var(--color-border);">
+  <div class="max-w-4xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <p class="text-sm" style="color: var(--color-text-secondary);">
+      Built by Daniel William · {year} · Built with <a href="https://astro.build" class="hover:underline" style="color: var(--color-accent);">Astro</a>
+    </p>
+    <div class="flex items-center gap-4">
+      <a href="https://github.com/dwi13L" target="_blank" rel="noopener" class="text-sm transition-colors hover:underline" style="color: var(--color-text-secondary);">
+        GitHub
+      </a>
+      <a href="https://linkedin.com/in/-daniel-william" target="_blank" rel="noopener" class="text-sm transition-colors hover:underline" style="color: var(--color-text-secondary);">
+        LinkedIn
+      </a>
+      <a href="mailto:danielwilliam.dev@gmail.com" class="text-sm transition-colors hover:underline" style="color: var(--color-text-secondary);">
+        Email
+      </a>
+    </div>
+  </div>
+</footer>
