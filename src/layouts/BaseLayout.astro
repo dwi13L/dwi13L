@@ -21,9 +21,9 @@ const { title, description = 'Daniel William — Lead Engineer · Applied AI · 
     <title>{title}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
-  <body>
+  <body class="min-h-screen flex flex-col">
     <Nav />
-    <main class="pt-14">
+    <main class="pt-14 flex-1">
       <slot />
     </main>
     <Footer />
