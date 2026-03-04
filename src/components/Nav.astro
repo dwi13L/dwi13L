@@ -1,0 +1,31 @@
+---
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/tracker', label: 'Tracker' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 border-b" style="background-color: var(--color-bg); border-color: var(--color-border);">
+  <div class="max-w-4xl mx-auto px-6 h-14 flex items-center justify-between">
+    <a href="/" class="font-mono text-sm font-bold" style="color: var(--color-accent);">
+      DW
+    </a>
+    <div class="flex items-center gap-6">
+      {navLinks.map(link => (
+        <a
+          href={link.href}
+          class={`text-sm transition-colors ${currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href)) ? 'text-white' : ''}`}
+          style={currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href)) ? 'color: var(--color-text-primary)' : 'color: var(--color-text-secondary)'}
+          onmouseover="this.style.color='var(--color-text-primary)'"
+          onmouseout={`this.style.color='${currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href)) ? 'var(--color-text-primary)' : 'var(--color-text-secondary)'}'`}
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+---
+
+<BaseLayout title="Daniel William — Lead Engineer & Applied AI Engineer">
+  <HeroSection />
+
+  <div class="max-w-4xl mx-auto px-6 pb-20 space-y-16">
+
+    <!-- Career Narrative -->
+    <section>
+      <h2 class="text-xl font-bold mb-6" style="font-family: var(--font-family-mono); color: var(--color-text-primary);">
+        <span style="color: var(--color-accent);">//</span> background
+      </h2>
+      <div class="space-y-4 max-w-2xl">
+        <p class="leading-relaxed" style="color: var(--color-text-secondary);">
+          I started as a software engineer and moved into a lead role within 3.5 years — not by waiting for permission, but by taking ownership of systems, shipping things, and pulling people along. I've learned that most engineering problems are actually communication and clarity problems in disguise.
+        </p>
+        <p class="leading-relaxed" style="color: var(--color-text-secondary);">
+          My engineering philosophy: build systems that are easy to reason about, operate cleanly in production, and don't require heroics to maintain. I'd rather delete 200 lines than write a clever workaround. When a codebase is beyond saving, I've been known to start over.
+        </p>
+        <p class="leading-relaxed" style="color: var(--color-text-secondary);">
+          I've been building with AI systems for a while now — not the hype kind, but the kind that actually runs in production. Agents with tool-use, retrieval systems, async pipelines. The infrastructure work is the hard part. Anyone can call an API.
+        </p>
+        <p class="leading-relaxed" style="color: var(--color-text-secondary);">
+          Right now I'm making a deliberate shift toward Applied AI Engineering as a discipline — and documenting that shift publicly. If that sounds interesting, read the blog.
+        </p>
+      </div>
+    </section>
+
+    <!-- Now Section -->
+    <section>
+      <h2 class="text-xl font-bold mb-6" style="font-family: var(--font-family-mono); color: var(--color-text-primary);">
+        <span style="color: var(--color-accent);">//</span> now
+      </h2>
+      <div class="space-y-3 max-w-xl">
+        <div class="flex items-start gap-3">
+          <span class="text-sm mt-0.5 shrink-0" style="color: var(--color-accent);">▸</span>
+          <p class="text-sm leading-relaxed" style="color: var(--color-text-secondary);">
+            Exploring production agent architectures and tool-augmented AI systems
+          </p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-sm mt-0.5 shrink-0" style="color: var(--color-accent);">▸</span>
+          <p class="text-sm leading-relaxed" style="color: var(--color-text-secondary);">
+            Building: <a href="/projects" style="color: var(--color-accent);">see projects →</a>
+          </p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-sm mt-0.5 shrink-0" style="color: var(--color-accent);">▸</span>
+          <p class="text-sm leading-relaxed" style="color: var(--color-text-secondary);">
+            Writing about the journey: <a href="/blog" style="color: var(--color-accent);">read the blog →</a>
+          </p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-sm mt-0.5 shrink-0" style="color: var(--color-accent);">▸</span>
+          <p class="text-sm leading-relaxed" style="color: var(--color-text-secondary);">
+            Tracking daily consistency publicly: <a href="/tracker" style="color: var(--color-accent);">see the tracker →</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</BaseLayout>

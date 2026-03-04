@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TrackerGrid from '../components/TrackerGrid.astro';
+---
+
+<BaseLayout title="Tracker — Daniel William" description="Daily accountability tracker">
+  <div class="max-w-4xl mx-auto px-6 py-16">
+    <div class="mb-10">
+      <h1 class="text-3xl font-bold mb-3" style="font-family: var(--font-family-mono); color: var(--color-text-primary);">Tracker</h1>
+      <p class="text-sm max-w-xl leading-relaxed" style="color: var(--color-text-secondary);">
+        Public accountability for three daily habits: DSA practice, AI learning, and job action. Updated daily. Green = done. The goal is to make the graph embarrassing to leave empty.
+      </p>
+    </div>
+    <TrackerGrid />
+  </div>
+</BaseLayout>

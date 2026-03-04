@@ -1,0 +1,35 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  tags: string[];
+  github?: string;
+  demo?: string;
+}
+
+const { title, description, tags, github, demo } = Astro.props;
+---
+
+<div class="rounded-lg border p-6 transition-colors duration-200 hover:border-opacity-80" style="background-color: var(--color-surface); border-color: var(--color-border);" onmouseover="this.style.borderColor='var(--color-accent-muted)'" onmouseout="this.style.borderColor='var(--color-border)'">
+  <h3 class="text-lg font-semibold mb-2" style="font-family: var(--font-family-mono); color: var(--color-text-primary);">{title}</h3>
+  <p class="text-sm mb-4 leading-relaxed" style="color: var(--color-text-secondary);">{description}</p>
+  <div class="flex flex-wrap gap-2 mb-4">
+    {tags.map(tag => (
+      <span class="text-xs px-2 py-1 rounded-full border font-mono" style="color: var(--color-text-secondary); border-color: var(--color-border); background-color: var(--color-bg);">
+        {tag}
+      </span>
+    ))}
+  </div>
+  <div class="flex items-center gap-4">
+    {github && (
+      <a href={github} target="_blank" rel="noopener" class="text-sm transition-colors" style="color: var(--color-accent);" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+        GitHub →
+      </a>
+    )}
+    {demo && (
+      <a href={demo} target="_blank" rel="noopener" class="text-sm transition-colors" style="color: var(--color-text-secondary);" onmouseover="this.style.color='var(--color-text-primary)'" onmouseout="this.style.color='var(--color-text-secondary)'">
+        Live Demo →
+      </a>
+    )}
+  </div>
+</div>
