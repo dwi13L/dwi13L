@@ -1,15 +1,64 @@
 {
-  "habits": ["DSA", "AI Learning", "Job Action"],
+  "habits": [
+    "DSA",
+    "AI Learning",
+    "Job Action"
+  ],
   "entries": {
-    "2026-03-04": [true, true, false],
-    "2026-03-03": [true, true, true],
-    "2026-03-02": [false, true, true],
-    "2026-03-01": [true, false, true],
-    "2026-02-28": [true, true, false],
-    "2026-02-27": [true, true, true],
-    "2026-02-26": [false, false, true],
-    "2026-02-25": [true, true, false],
-    "2026-02-24": [true, false, false],
-    "2026-02-23": [true, true, true]
+    "2026-03-04": [
+      true,
+      true,
+      false
+    ],
+    "2026-03-03": [
+      true,
+      true,
+      true
+    ],
+    "2026-03-02": [
+      false,
+      true,
+      true
+    ],
+    "2026-03-01": [
+      true,
+      false,
+      true
+    ],
+    "2026-02-28": [
+      true,
+      true,
+      false
+    ],
+    "2026-02-27": [
+      true,
+      true,
+      true
+    ],
+    "2026-02-26": [
+      false,
+      false,
+      true
+    ],
+    "2026-02-25": [
+      true,
+      true,
+      false
+    ],
+    "2026-02-24": [
+      true,
+      false,
+      false
+    ],
+    "2026-02-23": [
+      true,
+      true,
+      true
+    ],
+    "2026-03-05": [
+      true,
+      true,
+      true
+    ]
   }
 }

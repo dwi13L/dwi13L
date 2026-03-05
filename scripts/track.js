@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
+import fs from 'node:fs';
+import path from 'node:path';
 
 const args = process.argv.slice(2);
-const trackerPath = path.join(__dirname, '..', 'src', 'data', 'tracker.json');
+const trackerPath = path.join(import.meta.dirname, '..', 'src', 'data', 'tracker.json');
 const data = JSON.parse(fs.readFileSync(trackerPath, 'utf-8'));
 
 const today = new Date().toISOString().split('T')[0];
